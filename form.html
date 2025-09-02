@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Orçamento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hidden-options {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <main class="py-16">
+        <section id="form-orcamento" class="py-16 bg-white">
+            <div class="container mx-auto px-4 max-w-2xl">
+                <div class="bg-gray-100 p-8 rounded-lg shadow-lg">
+                    <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Solicite um Orçamento Personalizado</h2>
+                    <form action="#" method="POST" class="space-y-6">
+                        <div>
+                            <label for="nome" class="block text-gray-700 font-semibold mb-2">Seu Nome</label>
+                            <input type="text" id="nome" name="nome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-semibold mb-2">Seu E-mail</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                        </div>
+                        <div>
+                            <label for="telefone" class="block text-gray-700 font-semibold mb-2">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        </div>
+                        <div>
+                            <label for="servico" class="block text-gray-700 font-semibold mb-2">Tipo de Serviço</label>
+                            <select id="servico" name="servico" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required onchange="showOptions()">
+                                <option value="">Selecione um serviço</option>
+                                <option value="projetos">Projetos</option>
+                                <option value="gerenciamento">Gerenciamento de Obras</option>
+                                <option value="construcao">Construção</option>
+                                <option value="reformas">Reformas</option>
+                            </select>
+                        </div>
+
+                        <div id="projetos-options" class="hidden-options space-y-4">
+                            <label class="block text-gray-700 font-semibold mb-2">Selecione o(s) tipo(s) de projeto(s):</label>
+                            <div class="space-y-2">
+                                <label class="block"><input type="checkbox" name="projetos[]" value="arquitetonico" class="mr-2"> Projeto Arquitetônico</label>
+                                <label class="block"><input type="checkbox" name="projetos[]" value="estrutural" class="mr-2"> Projeto Estrutural</label>
+                                <label class="block"><input type="checkbox" name="projetos[]" value="eletrico" class="mr-2"> Projeto Elétrico</label>
+                                <label class="block"><input type="checkbox" name="projetos[]" value="hidrossanitario" class="mr-2"> Projeto Hidrossanitário</label>
+                                <label class="block"><input type="checkbox" name="projetos[]" value="agua-quente" class="mr-2"> Tubulação de água quente</label>
+                                <label class="block"><input type="checkbox" name="projetos[]" value="cabeamento-rede" class="mr-2"> Projeto de Cabeamento de rede</label>
+                                <label class="block"><input type="checkbox" name="projetos[]" value="tubulacao-gas" class="mr-2"> Tubulação de Gás</label>
+                                <label class="block"><input type="checkbox" name="projetos[]" value="climatizacao" class="mr-2"> Projeto de Climatização</label>
+                                <label class="block"><input type="checkbox" name="projetos[]" value="design-interiores" class="mr-2"> Design de interiores</label>
+                            </div>
+                        </div>
+
+                        <div id="construcao-options" class="hidden-options">
+                            <label for="construcao-tipo" class="block text-gray-700 font-semibold mb-2">Selecione o tipo de construção:</label>
+                            <select id="construcao-tipo" name="construcao-tipo" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                                <option value="">Selecione o tipo</option>
+                                <option value="residencial">Residencial</option>
+                                <option value="comercial">Comercial</option>
+                                <option value="industrial">Industrial</option>
+                            </select>
+                        </div>
+
+                        <div id="reformas-options" class="hidden-options space-y-4">
+                            <label class="block text-gray-700 font-semibold mb-2">Selecione o(s) tipo(s) de reforma(s):</label>
+                            <div class="space-y-2">
+                                <label class="block"><input type="checkbox" name="reformas[]" value="reforma-completa" class="mr-2"> Reforma Completa</label>
+                                <label class="block"><input type="checkbox" name="reformas[]" value="reforma-parcial" class="mr-2"> Reforma Parcial</label>
+                                <label class="block"><input type="checkbox" name="reformas[]" value="banheiros" class="mr-2"> Banheiros E/OU Lavabos</label>
+                                <label class="block"><input type="checkbox" name="reformas[]" value="cozinha" class="mr-2"> Cozinha E/OU Área Gourmet</label>
+                                <label class="block"><input type="checkbox" name="reformas[]" value="pinturas-acabamentos" class="mr-2"> Pinturas e Acabamentos</label>
+                                <label class="block"><input type="checkbox" name="reformas[]" value="instalacoes-eletricas-hidraulicas" class="mr-2"> Instalações Elétricas e Hidráulicas</label>
+                                <label class="block"><input type="checkbox" name="reformas[]" value="moveis-planejados" class="mr-2"> Móveis Planejados e Marcenaria</label>
+                                <label class="block"><input type="checkbox" name="reformas[]" value="pisos-revestimentos" class="mr-2"> Pisos e Revestimentos</label>
+                                <label class="block"><input type="checkbox" name="reformas[]" value="outros" class="mr-2"> Outros</label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="mensagem" class="block text-gray-700 font-semibold mb-2">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function showOptions() {
+            const serviceSelect = document.getElementById('servico');
+            const projectsOptions = document.getElementById('projetos-options');
+            const constructionOptions = document.getElementById('construcao-options');
+            const reformsOptions = document.getElementById('reformas-options');
+            const allHidden = [projectsOptions, constructionOptions, reformsOptions];
+
+            allHidden.forEach(el => {
+                el.classList.add('hidden-options');
+                // Resetting checkboxes and selects when hiding the div
+                el.querySelectorAll('input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
+                el.querySelectorAll('select').forEach(select => select.value = '');
+            });
+
+            if (serviceSelect.value === 'projetos') {
+                projectsOptions.classList.remove('hidden-options');
+            } else if (serviceSelect.value === 'construcao') {
+                constructionOptions.classList.remove('hidden-options');
+            } else if (serviceSelect.value === 'reformas') {
+                reformsOptions.classList.remove('hidden-options');
+            }
+        }
+    </script>
+</body>
+</html>

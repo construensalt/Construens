@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construens - Quem Somos</title>
+    <meta name="description" content="Conheça a história, missão, visão e os valores que guiam a Construens.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hidden-options {
+            display: none;
+        }
+
+        /* Estilos do Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 0.75rem;
+            max-width: 90%;
+            width: 400px;
+            position: relative;
+        }
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="imagens/logo.png" alt="Construens Logo" class="h-8 mr-2">
+                </div>
+
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a></li>
+                    <li><a href="quem-somos.html" class="text-blue-600 font-bold transition-colors">Quem Somos</a></li>
+                    <li><a href="services.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Serviços</a></li>
+                    <li><a href="portfolio.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Portfólio</a></li>
+                    <li><a href="reformas.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Reformas Seguras</a></li>
+                    <li><a href="contato.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Contato</a></li>
+                </ul>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <ul id="mobile-menu" class="md:hidden mt-4 space-y-2 hidden">
+                <li><a href="index.html" class="block text-gray-700 py-2">Home</a></li>
+                <li><a href="quem-somos.html" class="block text-blue-600 py-2">Quem Somos</a></li>
+                <li><a href="services.html" class="block text-gray-700 py-2">Serviços</a></li>
+                <li><a href="portfolio.html" class="block text-gray-700 py-2">Portfólio</a></li>
+                <li><a href="reformas.html" class="block text-gray-700 py-2">Reformas Seguras</a></li>
+                <li><a href="contato.html" class="block text-gray-700 py-2">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pt-24">
+        <section class="container mx-auto px-4 py-16">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">Conheça a Construens</h1>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Na Construens, transformamos ideias em realidade. Somos especialistas em soluções completas para construção civil, do projeto à execução, garantindo a excelência em cada etapa.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <img src="Imagens/quemsomos.jpg" alt="Equipe Construens em ação" class="rounded-lg shadow-lg">
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Nossa Missão e História</h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Fundada por empreendedores com a paixão pela construção, nossa missão é simples: transformar sonhos em realidade. Desde o primeiro dia, trabalhamos para oferecer soluções completas e de alta qualidade, garantindo que cada projeto se torne uma obra de arte da engenharia e da arquitetura.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Nosso crescimento é o reflexo do nosso compromisso em superar as expectativas dos clientes. Somos movidos pela inovação e pela busca constante por aperfeiçoamento, sempre com o objetivo de entregar a máxima eficiência e segurança.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-100 py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Nossos Valores</h2>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <i class="fas fa-handshake-angle text-blue-600 text-4xl mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Transparência e Confiança</h3>
+                        <p class="text-gray-600">Construímos relações sólidas baseadas em clareza, honestidade e respeito mútuo em todas as etapas do projeto.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <i class="fas fa-cogs text-blue-600 text-4xl mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Inovação e Excelência</h3>
+                        <p class="text-gray-600">Utilizamos as mais novas técnicas e materiais do mercado para garantir a qualidade superior e a otimização dos resultados.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <i class="fas fa-users-cog text-blue-600 text-4xl mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Profissionalismo e Paixão</h3>
+                        <p class="text-gray-600">Nossa equipe é formada por especialistas dedicados, que trabalham com paixão para superar as expectativas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Construens</h4>
+                    <p class="text-gray-400">Sua parceira em construção e reformas. Qualidade, segurança e tranquilidade para sua obra.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Páginas</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="quem-somos.html" class="text-gray-300 hover:text-white transition-colors">Quem Somos</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Serviços</a></li>
+                        <li><a href="portfolio.html" class="text-gray-300 hover:text-white transition-colors">Portfólio</a></li>
+                        <li><a href="reformas.html" class="text-gray-300 hover:text-white transition-colors">Reformas Seguras</a></li>
+                        <li><a href="contato.html" class="text-gray-300 hover:text-white transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contato</h4>
+                    <div class="space-y-2">
+                        <p class="text-gray-300">
+                            <i class="fas fa-phone mr-2"></i>
+                            (11) 914-310-221
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-envelope mr-2"></i>
+                            construens.alt@gmail.com
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            São Paulo, São José dos Campos e Região
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2025 Construens. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="open-whatsapp-modal" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </button>
+
+    <div id="whatsapp-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 class="text-2xl font-bold text-gray-800 text-center mb-6">Fale Conosco pelo WhatsApp</h3>
+            <p class="text-gray-600 text-center mb-4">Por favor, preencha seus dados para iniciarmos a conversa.</p>
+            <form id="whatsapp-form" class="space-y-4">
+                <div>
+                    <label for="whatsapp-nome" class="block text-gray-700 font-semibold mb-2">Nome</label>
+                    <input type="text" id="whatsapp-nome" name="Nome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                </div>
+                <div>
+                    <label for="whatsapp-email" class="block text-gray-700 font-semibold mb-2">E-mail</label>
+                    <input type="email" id="whatsapp-email" name="Email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                </div>
+                <div>
+                    <label for="whatsapp-telefone" class="block text-gray-700 font-semibold mb-2">Telefone</label>
+                    <input type="tel" id="whatsapp-telefone" name="Telefone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="w-full bg-green-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-green-700 transition-colors">
+                        Iniciar Conversa
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Script para o Modal e Formulário do WhatsApp
+        const whatsappModal = document.getElementById('whatsapp-modal');
+        const openModalBtn = document.getElementById('open-whatsapp-modal');
+        const closeBtn = document.querySelector('.close-button');
+        const whatsappForm = document.getElementById('whatsapp-form');
+
+        // URL do seu Google Apps Script
+        const SCRIPT_URL_WHATSAPP = 'https://script.google.com/macros/s/AKfycbx8aXGmvNcYmyeCgZNFJcsYmkz2jlB8gup05xvigr6uirRhaneRVrGL_t0fB_xzqmDIxw/exec'; 
+
+        // Abre o modal ao clicar no botão flutuante
+        openModalBtn.addEventListener('click', () => {
+            whatsappModal.style.display = 'flex';
+        });
+
+        // Fecha o modal ao clicar no 'x'
+        closeBtn.addEventListener('click', () => {
+            whatsappModal.style.display = 'none';
+        });
+
+        // Fecha o modal ao clicar fora dele
+        window.addEventListener('click', (event) => {
+            if (event.target == whatsappModal) {
+                whatsappModal.style.display = 'none';
+            }
+        });
+
+        // Envia os dados e redireciona para o WhatsApp
+        whatsappForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const data = new FormData(form);
+            
+            fetch(SCRIPT_URL_WHATSAPP, {
+                method: 'POST',
+                body: data,
+                mode: 'no-cors'
+            })
+            .then(() => {
+                const nome = form.querySelector('#whatsapp-nome').value;
+                const mensagem = `Olá, meu nome é ${nome}. Gostaria de mais informações sobre a página Quem Somos.`;
+                const whatsappUrl = `https://wa.me/5511914310221?text=${encodeURIComponent(mensagem)}`;
+                window.open(whatsappUrl, '_blank');
+            })
+            .catch(error => {
+                console.error('Erro ao enviar o formulário:', error);
+                // Em caso de erro, ainda redireciona para o WhatsApp
+                const nome = form.querySelector('#whatsapp-nome').value;
+                const mensagem = `Olá, meu nome é ${nome}. Gostaria de mais informações sobre a página Quem Somos.`;
+                const whatsappUrl = `https://wa.me/5511914310221?text=${encodeURIComponent(mensagem)}`;
+                window.open(whatsappUrl, '_blank');
+            });
+
+            whatsappModal.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
