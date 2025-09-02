@@ -208,19 +208,19 @@
                     <form id="contact-form" action="https://script.google.com/macros/s/AKfycbxwkhZ-o--JT1c57gwUExJyiJvz4VZLeCURlqHYd1PARvTWYnP37dELXQLaDZgXUjwL9Q/exec" method="POST" class="space-y-6">
                         <div>
                             <label for="nome" class="block text-gray-700 font-semibold mb-2">Seu Nome</label>
-                            <input type="text" id="nome" name="nome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                            <input type="text" id="nome" name="Nome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
                         </div>
                         <div>
                             <label for="email" class="block text-gray-700 font-semibold mb-2">Seu E-mail</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                            <input type="email" id="email" name="Email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
                         </div>
                         <div>
                             <label for="telefone" class="block text-gray-700 font-semibold mb-2">Telefone</label>
-                            <input type="tel" id="telefone" name="telefone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                            <input type="tel" id="telefone" name="Telefone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
                         </div>
                         <div>
                             <label for="servico" class="block text-gray-700 font-semibold mb-2">Tipo de Serviço</label>
-                            <select id="servico" name="servico" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required onchange="showOptions()">
+                            <select id="servico" name="Serviço" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required onchange="showOptions()">
                                 <option value="">Selecione um serviço</option>
                                 <option value="projetos">Projetos</option>
                                 <option value="gerenciamento">Gerenciamento de Obras</option>
@@ -232,21 +232,21 @@
                         <div id="projetos-options" class="hidden-options space-y-4">
                             <label class="block text-gray-700 font-semibold mb-2">Selecione o(s) tipo(s) de projeto(s):</label>
                             <div class="space-y-2">
-                                <label class="block"><input type="checkbox" name="projetos[]" value="Projeto Arquitetônico" class="mr-2"> Projeto Arquitetônico</label>
-                                <label class="block"><input type="checkbox" name="projetos[]" value="Projeto Estrutural" class="mr-2"> Projeto Estrutural</label>
-                                <label class="block"><input type="checkbox" name="projetos[]" value="Projeto Elétrico" class="mr-2"> Projeto Elétrico</label>
-                                <label class="block"><input type="checkbox" name="projetos[]" value="Projeto Hidrossanitário" class="mr-2"> Projeto Hidrossanitário</label>
-                                <label class="block"><input type="checkbox" name="projetos[]" value="Tubulação de água quente" class="mr-2"> Tubulação de água quente</label>
-                                <label class="block"><input type="checkbox" name="projetos[]" value="Projeto de Cabeamento de rede" class="mr-2"> Projeto de Cabeamento de rede</label>
-                                <label class="block"><input type="checkbox" name="projetos[]" value="Tubulação de Gás" class="mr-2"> Tubulação de Gás</label>
-                                <label class="block"><input type="checkbox" name="projetos[]" value="Projeto de Climatização" class="mr-2"> Projeto de Climatização</label>
-                                <label class="block"><input type="checkbox" name="projetos[]" value="Design de interiores" class="mr-2"> Design de interiores</label>
+                                <label class="block"><input type="checkbox" name="Projeto Arquitetônico" value="X" class="mr-2"> Projeto Arquitetônico</label>
+                                <label class="block"><input type="checkbox" name="Projeto Estrutural" value="X" class="mr-2"> Projeto Estrutural</label>
+                                <label class="block"><input type="checkbox" name="Projeto Elétrico" value="X" class="mr-2"> Projeto Elétrico</label>
+                                <label class="block"><input type="checkbox" name="Projeto Hidrossanitário" value="X" class="mr-2"> Projeto Hidrossanitário</label>
+                                <label class="block"><input type="checkbox" name="Tubulação de água quente" value="X" class="mr-2"> Tubulação de água quente</label>
+                                <label class="block"><input type="checkbox" name="Projeto de Cabeamento de rede" value="X" class="mr-2"> Projeto de Cabeamento de rede</label>
+                                <label class="block"><input type="checkbox" name="Tubulação de Gás" value="X" class="mr-2"> Tubulação de Gás</label>
+                                <label class="block"><input type="checkbox" name="Projeto de Climatização" value="X" class="mr-2"> Projeto de Climatização</label>
+                                <label class="block"><input type="checkbox" name="Design de interiores" value="X" class="mr-2"> Design de interiores</label>
                             </div>
                         </div>
 
                         <div id="construcao-options" class="hidden-options">
                             <label for="construcao-tipo" class="block text-gray-700 font-semibold mb-2">Selecione o tipo de construção:</label>
-                            <select id="construcao-tipo" name="construcao-tipo" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                            <select id="construcao-tipo" name="Tipo de Construção" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
                                 <option value="">Selecione o tipo</option>
                                 <option value="Residencial">Residencial</option>
                                 <option value="Comercial">Comercial</option>
@@ -257,26 +257,26 @@
                         <div id="reformas-options" class="hidden-options space-y-4">
                             <label class="block text-gray-700 font-semibold mb-2">Selecione o(s) tipo(s) de reforma(s):</label>
                             <div class="space-y-2">
-                                <label class="block"><input type="checkbox" name="reformas[]" value="Reforma Completa" class="mr-2"> Reforma Completa</label>
-                                <label class="block"><input type="checkbox" name="reformas[]" value="Reforma Parcial" class="mr-2"> Reforma Parcial</label>
-                                <label class="block"><input type="checkbox" name="reformas[]" value="Banheiros E/OU Lavabos" class="mr-2"> Banheiros E/OU Lavabos</label>
-                                <label class="block"><input type="checkbox" name="reformas[]" value="Cozinha E/OU Área Gourmet" class="mr-2"> Cozinha E/OU Área Gourmet</label>
-                                <label class="block"><input type="checkbox" name="reformas[]" value="Pinturas e Acabamentos" class="mr-2"> Pinturas e Acabamentos</label>
-                                <label class="block"><input type="checkbox" name="reformas[]" value="Instalações Elétricas e Hidráulicas" class="mr-2"> Instalações Elétricas e Hidráulicas</label>
-                                <label class="block"><input type="checkbox" name="reformas[]" value="Móveis Planejados e Marcenaria" class="mr-2"> Móveis Planejados e Marcenaria</label>
-                                <label class="block"><input type="checkbox" name="reformas[]" value="Pisos e Revestimentos" class="mr-2"> Pisos e Revestimentos</label>
-                                <label class="block"><input type="checkbox" name="reformas[]" value="Outros" class="mr-2"> Outros</label>
+                                <label class="block"><input type="checkbox" name="Reforma Completa" value="X" class="mr-2"> Reforma Completa</label>
+                                <label class="block"><input type="checkbox" name="Reforma Parcial" value="X" class="mr-2"> Reforma Parcial</label>
+                                <label class="block"><input type="checkbox" name="Banheiros E/OU Lavabos" value="X" class="mr-2"> Banheiros E/OU Lavabos</label>
+                                <label class="block"><input type="checkbox" name="Cozinha E/OU Área Gourmet" value="X" class="mr-2"> Cozinha E/OU Área Gourmet</label>
+                                <label class="block"><input type="checkbox" name="Pinturas e Acabamentos" value="X" class="mr-2"> Pinturas e Acabamentos</label>
+                                <label class="block"><input type="checkbox" name="Instalações Elétricas e Hidráulicas" value="X" class="mr-2"> Instalações Elétricas e Hidráulicas</label>
+                                <label class="block"><input type="checkbox" name="Móveis Planejados e Marcenaria" value="X" class="mr-2"> Móveis Planejados e Marcenaria</label>
+                                <label class="block"><input type="checkbox" name="Pisos e Revestimentos" value="X" class="mr-2"> Pisos e Revestimentos</label>
+                                <label class="block"><input type="checkbox" name="Outros" value="X" class="mr-2"> Outros</label>
                             </div>
                         </div>
 
                         <div>
                             <label for="m2" class="block text-gray-700 font-semibold mb-2">Área (m²)</label>
-                            <input type="number" id="m2" name="m2" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                            <input type="number" id="m2" name="Área (m²)" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
                         </div>
 
                         <div>
                             <label for="mensagem" class="block text-gray-700 font-semibold mb-2">Conte sobre seu Projeto ou Reforma</label>
-                            <textarea id="mensagem" name="mensagem" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required></textarea>
+                            <textarea id="mensagem" name="Mensagem" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required></textarea>
                         </div>
                         <div class="text-center">
                             <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">Enviar</button>
@@ -293,7 +293,6 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Construens</h4>
                     <p class="text-gray-400">Sua parceira em construção e reformas. Qualidade, segurança e tranquilidade para sua obra.
-
 .</p>
                 </div>
                 <div>
@@ -322,7 +321,7 @@
                             <i class="fas fa-map-marker-alt mr-2"></i>
                             São Paulo, São José dos Campos e Região
                         </p>
-                        </div>
+                    </div>
                 </div>
             </div>
 
