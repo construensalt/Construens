@@ -141,9 +141,8 @@
                         <div class="flex items-start">
                             <i class="fas fa-map-marker-alt text-blue-600 text-2xl mr-4 mt-1"></i>
                             <p class="text-gray-600 text-lg">
-                                R. Dr. Orlando Feirabend Filho nº 230 <br>
-                                Torre A, Sala 604 – Parque Res. Aquarius <br>
-                                São José dos Campos – SP – CEP: 12246-190
+                                AVENIDA VICENTE CARLOS CORRA, Nº 94 <br>
+                                SALA 1 - SÃO JOSÉ DOS CAMPOS - SP
                             </p>
                         </div>
                     </div>
@@ -183,7 +182,7 @@
                                 <option value="reformas">Reformas</option>
                             </select>
                         </div>
-    
+                        
                         <div id="projetos-options" class="hidden-options space-y-4">
                             <label class="block text-gray-700 font-semibold mb-2">Selecione o(s) tipo(s) de projeto(s):</label>
                             <div class="space-y-2">
@@ -198,7 +197,7 @@
                                 <label class="block"><input type="checkbox" name="projetos[]" value="Design de interiores" class="mr-2"> Design de interiores</label>
                             </div>
                         </div>
-    
+                        
                         <div id="construcao-options" class="hidden-options">
                             <label for="construcao-tipo" class="block text-gray-700 font-semibold mb-2">Selecione o tipo de construção:</label>
                             <select id="construcao-tipo" name="construcao-tipo" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
@@ -208,7 +207,7 @@
                                 <option value="Industrial">Industrial</option>
                             </select>
                         </div>
-    
+                        
                         <div id="reformas-options" class="hidden-options space-y-4">
                             <label class="block text-gray-700 font-semibold mb-2">Selecione o(s) tipo(s) de reforma(s):</label>
                             <div class="space-y-2">
@@ -223,7 +222,7 @@
                                 <label class="block"><input type="checkbox" name="reformas[]" value="Outros" class="mr-2"> Outros</label>
                             </div>
                         </div>
-    
+                        
                         <div>
                             <label for="m2" class="block text-gray-700 font-semibold mb-2">Área (m²)</label>
                             <input type="number" id="m2" name="m2" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
@@ -293,7 +292,7 @@
     
     <div id="whatsapp-modal" class="modal">
         <div class="modal-content">
-            <span class="close-button">&times;</span>
+            <span class="close-button">×</span>
             <h3 class="text-2xl font-bold text-gray-800 text-center mb-6">Fale Conosco pelo WhatsApp</h3>
             <p class="text-gray-600 text-center mb-4">Por favor, preencha seus dados para iniciarmos a conversa.</p>
             <form id="whatsapp-form" class="space-y-4">
@@ -330,19 +329,19 @@
             const constructionOptions = document.getElementById('construcao-options');
             const reformsOptions = document.getElementById('reformas-options');
             const allHidden = [projectsOptions, constructionOptions, reformsOptions];
-    
+        
             allHidden.forEach(el => {
                 el.classList.add('hidden-options');
                 el.querySelectorAll('input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
                 el.querySelectorAll('select').forEach(select => select.value = '');
             });
-    
+        
             if (serviceSelect.value === 'projetos') {
                 projectsOptions.classList.remove('hidden-options');
             } else if (serviceSelect.value === 'construcao') {
                 constructionOptions.classList.remove('hidden-options');
             } else if (serviceSelect.value === 'reformas') {
-                reformasOptions.classList.remove('hidden-options');
+                reformsOptions.classList.remove('hidden-options');
             }
         }
 
@@ -353,7 +352,7 @@
         const whatsappForm = document.getElementById('whatsapp-form');
 
         // URL do seu Google Apps Script (IMPLANTE O SCRIPT E COLOQUE A URL AQUI)
-        const SCRIPT_URL_WHATSAPP = 'https://script.google.com/macros/s/AKfycbx8aXGmvNcYmyeCgZNFJcsYmkz2jlB8gup05xvigr6uirRhaneRVrGL_t0fB_xzqmDIxw/exec'; 
+        const SCRIPT_URL_WHATSAPP = 'https://script.google.com/macros/s/AKfycbx8aXGmvNcYmyeCgZNFJcsYmkz2jlB8gup05xvigr6uirRhaneRVrGL_t0fB_xzqmDIxw/exec';  
 
         // Abre o modal ao clicar no botão
         openModalBtn.addEventListener('click', () => {
