@@ -8,10 +8,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        .hidden-options {
-            display: none;
-        }
-
         /* INÍCIO - ESTILOS PARA O FUNDO COM IMAGEM E SOBREPOSIÇÃO */
         .hero-contact {
             position: relative;
@@ -183,7 +179,7 @@
                             </select>
                         </div>
                         
-                        <div id="projetos-options" class="hidden-options space-y-4">
+                        <div id="projetos-options" class="hidden space-y-4">
                             <label class="block text-gray-700 font-semibold mb-2">Selecione o(s) tipo(s) de projeto(s):</label>
                             <div class="space-y-2">
                                 <label class="block"><input type="checkbox" name="projetos[]" value="Projeto Arquitetônico" class="mr-2"> Projeto Arquitetônico</label>
@@ -198,7 +194,7 @@
                             </div>
                         </div>
                         
-                        <div id="construcao-options" class="hidden-options">
+                        <div id="construcao-options" class="hidden">
                             <label for="construcao-tipo" class="block text-gray-700 font-semibold mb-2">Selecione o tipo de construção:</label>
                             <select id="construcao-tipo" name="construcao-tipo" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
                                 <option value="">Selecione o tipo</option>
@@ -208,7 +204,7 @@
                             </select>
                         </div>
                         
-                        <div id="reformas-options" class="hidden-options space-y-4">
+                        <div id="reformas-options" class="hidden space-y-4">
                             <label class="block text-gray-700 font-semibold mb-2">Selecione o(s) tipo(s) de reforma(s):</label>
                             <div class="space-y-2">
                                 <label class="block"><input type="checkbox" name="reformas[]" value="Reforma Completa" class="mr-2"> Reforma Completa</label>
@@ -266,140 +262,4 @@
                     <div class="space-y-2">
                         <p class="text-gray-300">
                             <i class="fas fa-envelope mr-2"></i>
-                            construens.alt@gmail.com
-                        </p>
-                        <p class="text-gray-300">
-                            <i class="fas fa-phone mr-2"></i>
-                            (11) 914-310-221
-                        </p>
-                        <p class="text-gray-300">
-                            <i class="fas fa-map-marker-alt mr-2"></i>
-                            São Paulo, São José dos Campos e Região
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-300">© 2025 Construens. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <button id="open-whatsapp-modal" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50">
-        <i class="fab fa-whatsapp text-2xl"></i>
-    </button>
-    
-    <div id="whatsapp-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">×</span>
-            <h3 class="text-2xl font-bold text-gray-800 text-center mb-6">Fale Conosco pelo WhatsApp</h3>
-            <p class="text-gray-600 text-center mb-4">Por favor, preencha seus dados para iniciarmos a conversa.</p>
-            <form id="whatsapp-form" class="space-y-4">
-                <div>
-                    <label for="whatsapp-nome" class="block text-gray-700 font-semibold mb-2">Nome</label>
-                    <input type="text" id="whatsapp-nome" name="Nome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
-                </div>
-                <div>
-                    <label for="whatsapp-email" class="block text-gray-700 font-semibold mb-2">E-mail</label>
-                    <input type="email" id="whatsapp-email" name="Email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
-                </div>
-                <div>
-                    <label for="whatsapp-telefone" class="block text-gray-700 font-semibold mb-2">Telefone</label>
-                    <input type="tel" id="whatsapp-telefone" name="Telefone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="w-full bg-green-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-green-700 transition-colors">
-                        Iniciar Conversa
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-    
-    <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
-
-        function showOptions() {
-            const serviceSelect = document.getElementById('servico');
-            const projectsOptions = document.getElementById('projetos-options');
-            const constructionOptions = document.getElementById('construcao-options');
-            const reformsOptions = document.getElementById('reformas-options');
-            const allHidden = [projectsOptions, constructionOptions, reformsOptions];
-        
-            allHidden.forEach(el => {
-                el.classList.add('hidden-options');
-                el.querySelectorAll('input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
-                el.querySelectorAll('select').forEach(select => select.value = '');
-            });
-        
-            if (serviceSelect.value === 'projetos') {
-                projectsOptions.classList.remove('hidden-options');
-            } else if (serviceSelect.value === 'construcao') {
-                constructionOptions.classList.remove('hidden-options');
-            } else if (serviceSelect.value === 'reformas') {
-                reformsOptions.classList.remove('hidden-options');
-            }
-        }
-
-        // Script para o Modal e Formulário do WhatsApp
-        const whatsappModal = document.getElementById('whatsapp-modal');
-        const openModalBtn = document.getElementById('open-whatsapp-modal');
-        const closeBtn = document.querySelector('.close-button');
-        const whatsappForm = document.getElementById('whatsapp-form');
-
-        // URL do seu Google Apps Script (IMPLANTE O SCRIPT E COLOQUE A URL AQUI)
-        const SCRIPT_URL_WHATSAPP = 'https://script.google.com/macros/s/AKfycbx8aXGmvNcYmyeCgZNFJcsYmkz2jlB8gup05xvigr6uirRhaneRVrGL_t0fB_xzqmDIxw/exec';  
-
-        // Abre o modal ao clicar no botão
-        openModalBtn.addEventListener('click', () => {
-            whatsappModal.style.display = 'flex';
-        });
-
-        // Fecha o modal ao clicar no 'x'
-        closeBtn.addEventListener('click', () => {
-            whatsappModal.style.display = 'none';
-        });
-
-        // Fecha o modal ao clicar fora dele
-        window.addEventListener('click', (event) => {
-            if (event.target == whatsappModal) {
-                whatsappModal.style.display = 'none';
-            }
-        });
-
-        // Envia os dados e redireciona para o WhatsApp
-        whatsappForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const form = e.target;
-            const data = new FormData(form);
-            
-            fetch(SCRIPT_URL_WHATSAPP, {
-                method: 'POST',
-                body: data,
-                mode: 'no-cors'
-            })
-            .then(() => {
-                const nome = form.querySelector('#whatsapp-nome').value;
-                const mensagem = `Olá, meu nome é ${nome}. Gostaria de entrar em contato após ver a página de Contato do site.`;
-                const whatsappUrl = `https://wa.me/5511914310221?text=${encodeURIComponent(mensagem)}`;
-                window.open(whatsappUrl, '_blank');
-            })
-            .catch(error => {
-                console.error('Erro ao enviar o formulário:', error);
-                // Em caso de erro, ainda redireciona para o WhatsApp
-                const nome = form.querySelector('#whatsapp-nome').value;
-                const mensagem = `Olá, meu nome é ${nome}. Gostaria de entrar em contato após ver a página de Contato do site.`;
-                const whatsappUrl = `https://wa.me/5511914310221?text=${encodeURIComponent(mensagem)}`;
-                window.open(whatsappUrl, '_blank');
-            });
-
-            whatsappModal.style.display = 'none';
-        });
-    </script>
-</body>
-</html>
+                            construens
