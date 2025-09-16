@@ -1,388 +1,386 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Construens</title>
-    <meta name="description" content="Entre em contato com a Construens em São José dos Campos. Agende uma visita ou solicite seu orçamento.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        /* INÍCIO - ESTILOS PARA O FUNDO COM IMAGEM E SOBREPOSIÇÃO */
-        .hero-contact {
-            position: relative;
-        }
-        .hero-contact::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4); /* Preto com 40% de transparência */
-            z-index: 1;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        /* FIM - ESTILOS PARA O FUNDO COM IMAGEM E SOBREPOSIÇÃO */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Construens</title>
+    <meta name="description" content="Entre em contato com a Construens em São José dos Campos. Agende uma visita ou solicite seu orçamento.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* INÍCIO - ESTILOS PARA O FUNDO COM IMAGEM E SOBREPOSIÇÃO */
+        .hero-contact {
+            position: relative;
+        }
+        .hero-contact::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Preto com 40% de transparência */
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        /* FIM - ESTILOS PARA O FUNDO COM IMAGEM E SOBREPOSIÇÃO */
 
-        /* Estilos do Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 100;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background-color: white;
-            padding: 2.5rem;
-            border-radius: 0.75rem;
-            max-width: 90%;
-            width: 400px;
-            position: relative;
-        }
-        .close-button {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #333;
-        }
-    </style>
+        /* Estilos do Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 0.75rem;
+            max-width: 90%;
+            width: 400px;
+            position: relative;
+        }
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+        }
+    </style>
 </head>
 <body class="bg-gray-50 font-sans">
 
-    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
-        <nav class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center">
-                    <img src="imagens/logo.png" class="h-8 mr-2"> 
-                </div>
-                
-                <ul class="hidden md:flex space-x-8">
-                    <li><a href="index.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a></li>
-                    <li><a href="quem-somos.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Quem Somos</a></li>
-                    <li><a href="services.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Serviços</a></li>
-                    <li><a href="portfolio.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Portfólio</a></li>
-                    <li><a href="reformas.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Reformas Seguras</a></li>
-                    <li><a href="contato.html" class="text-blue-600 font-bold">Contato</a></li>
-                </ul>
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="imagens/logo.png" class="h-8 mr-2"> 
+                </div>
+                
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a></li>
+                    <li><a href="quem-somos.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Quem Somos</a></li>
+                    <li><a href="services.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Serviços</a></li>
+                    <li><a href="portfolio.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Portfólio</a></li>
+                    <li><a href="reformas.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Reformas Seguras</a></li>
+                    <li><a href="contato.html" class="text-blue-600 font-bold">Contato</a></li>
+                </ul>
 
-                <button class="md:hidden" onclick="toggleMobileMenu()">
-                    <i class="fas fa-bars text-2xl text-gray-700"></i>
-                </button>
-            </div>
-            
-            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
-                <ul class="space-y-4">
-                    <li><a href="index.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a></li>
-                    <li><a href="quem-somos.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium">Quem Somos</a></li>
-                    <li><a href="services.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium">Serviços</a></li>
-                    <li><a href="portfolio.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium">Portfólio</a></li>
-                    <li><a href="reformas.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium">Reformas Seguras</a></li>
-                    <li><a href="contato.html" class="block text-blue-600 font-bold">Contato</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-2xl text-gray-700"></i>
+                </button>
+            </div>
+            
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <ul class="space-y-4">
+                    <li><a href="index.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a></li>
+                    <li><a href="quem-somos.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium">Quem Somos</a></li>
+                    <li><a href="services.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium">Serviços</a></li>
+                    <li><a href="portfolio.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium">Portfólio</a></li>
+                    <li><a href="reformas.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium">Reformas Seguras</a></li>
+                    <li><a href="contato.html" class="block text-blue-600 font-bold">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <main class="pt-24">
-        <section class="hero-contact text-white py-24 text-center" style="background-image: url('URL_DA_SUA_IMAGEM'); background-size: cover; background-position: center;">
-            <div class="hero-content container mx-auto px-4">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Entre em Contato</h1>
-                <p class="text-lg md:text-xl max-w-2xl mx-auto">Tire suas dúvidas, agende uma visita ou solicite um orçamento detalhado.</p>
-            </div>
-        </section>
+    <main class="pt-24">
+        <section class="hero-contact text-white py-24 text-center" style="background-image: url('URL_DA_SUA_IMAGEM'); background-size: cover; background-position: center;">
+            <div class="hero-content container mx-auto px-4">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Entre em Contato</h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto">Tire suas dúvidas, agende uma visita ou solicite um orçamento detalhado.</p>
+            </div>
+        </section>
 
-        <section class="py-16">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Nossas Informações</h2>
-                <div class="bg-gray-100 p-8 rounded-lg shadow-lg mb-12">
-                    <div class="flex flex-col md:flex-row justify-center items-center md:space-x-12 space-y-4 md:space-y-0 text-center">
-                        <div class="flex items-center space-x-2">
-                            <i class="fas fa-phone-alt text-blue-600 text-2xl"></i>
-                            <p class="text-gray-600 text-lg">(11) 914-310-221</p>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <i class="fas fa-envelope text-blue-600 text-2xl"></i>
-                            <p class="text-gray-600 text-lg">construens.alt@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Nossas Informações</h2>
+                <div class="bg-gray-100 p-8 rounded-lg shadow-lg mb-12">
+                    <div class="flex flex-col md:flex-row justify-center items-center md:space-x-12 space-y-4 md:space-y-0 text-center">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-phone-alt text-blue-600 text-2xl"></i>
+                            <p class="text-gray-600 text-lg">(11) 914-310-221</p>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-envelope text-blue-600 text-2xl"></i>
+                            <p class="text-gray-600 text-lg">construens.alt@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
 
-                <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Nosso Endereço</h2>
-                <div class="grid md:grid-cols-1 gap-12 mb-12">
-                    <div class="bg-gray-100 p-8 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4">São José dos Campos - SP</h3>
-                        <div class="flex items-start">
-                            <i class="fas fa-map-marker-alt text-blue-600 text-2xl mr-4 mt-1"></i>
-                            <p class="text-gray-600 text-lg">
-                                AVENIDA VICENTE CARLOS CORRA, Nº 94 <br>
-                                SALA 1 - SÃO JOSÉ DOS CAMPOS - SP
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Onde Estamos</h3>
-                <div class="aspect-w-16 aspect-h-9 w-full rounded-lg overflow-hidden shadow-lg">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4124.717576626573!2d-45.829542624210966!3d-23.227958079030415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4caab213eac1%3A0x5c1ca751d3dbf8fd!2sAv.%20Vicente%20Carlos%20Corr%C3%A1%2C%2094%20-%20Recanto%20dos%20Eucaliptos%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP%2C%2012226-397!5e1!3m2!1sen!2sbr!4v1758027367943!5m2!1sen!2sbr" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
-        </section>
+                <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Nosso Endereço</h2>
+                <div class="grid md:grid-cols-1 gap-12 mb-12">
+                                        <div class="bg-gray-100 p-8 rounded-lg shadow-lg text-center">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">São José dos Campos - SP</h3>
+                        <div class="flex items-start justify-center">                             <i class="fas fa-map-marker-alt text-blue-600 text-2xl mr-4 mt-1"></i>
+                            <p class="text-gray-600 text-lg">
+                                AVENIDA VICENTE CARLOS CORRA, Nº 94 <br>
+                                SALA 1 - SÃO JOSÉ DOS CAMPOS - SP
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Onde Estamos</h3>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4124.717576626573!2d-45.829542624210966!3d-23.227958079030415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4caab213eac1%3A0x5c1ca751d3dbf8fd!2sAv.%20Vicente%20Carlos%20Corr%C3%A1%2C%2094%20-%20Recanto%20dos%20Eucaliptos%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP%2C%2012226-397!5e1!3m2!1sen!2sbr!4v1758027367943!5m2!1sen!2sbr" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-96 rounded-lg overflow-hidden shadow-lg"></iframe>
+        </section>
 
-        <section class="py-16 bg-gray-100">
-            <div class="container mx-auto px-4">
-                <div class="p-8 rounded-lg shadow-lg bg-white">
-                    <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Solicite seu Orçamento</h2>
-                    <form id="contact-form" action="https://script.google.com/macros/s/AKfycbxwkhZ-o--JT1c57gwUExJyiJvz4VZLeCURlqHYd1PARvTWYnP37dELXQLaDZgXUjwL9Q/exec" method="POST" class="space-y-6">
-                        <div>
-                            <label for="nome" class="block text-gray-700 font-semibold mb-2">Seu Nome</label>
-                            <input type="text" id="nome" name="nome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-gray-700 font-semibold mb-2">Seu E-mail</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
-                        </div>
-                        <div>
-                            <label for="telefone" class="block text-gray-700 font-semibold mb-2">Telefone</label>
-                            <input type="tel" id="telefone" name="telefone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
-                        </div>
-                        <div>
-                            <label for="servico" class="block text-gray-700 font-semibold mb-2">Tipo de Serviço</label>
-                            <select id="servico" name="servico" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required onchange="showOptions()">
-                                <option value="">Selecione um serviço</option>
-                                <option value="projetos">Projetos</option>
-                                <option value="gerenciamento">Gerenciamento de Obras</option>
-                                <option value="construcao">Construção</option>
-                                <option value="reformas">Reformas</option>
-                            </select>
-                        </div>
-                        
-                        <div id="projetos-options" class="hidden space-y-4">
-                            <label class="block text-gray-700 font-semibold mb-2">Selecione o(s) tipo(s) de projeto(s):</label>
-                            <div class="space-y-2">
-                                <label class="block"><input type="checkbox" name="projetos[]" value="Projeto Arquitetônico" class="mr-2"> Projeto Arquitetônico</label>
-                                <label class="block"><input type="checkbox" name="projetos[]" value="Projeto Estrutural" class="mr-2"> Projeto Estrutural</label>
-                                <label class="block"><input type="checkbox" name="projetos[]" value="Projeto Elétrico" class="mr-2"> Projeto Elétrico</label>
-                                <label class="block"><input type="checkbox" name="projetos[]" value="Projeto Hidrossanitário" class="mr-2"> Projeto Hidrossanitário</label>
-                                <label class="block"><input type="checkbox" name="projetos[]" value="Tubulação de água quente" class="mr-2"> Tubulação de água quente</label>
-                                <label class="block"><input type="checkbox" name="projetos[]" value="Projeto de Cabeamento de rede" class="mr-2"> Projeto de Cabeamento de rede</label>
-                                <label class="block"><input type="checkbox" name="projetos[]" value="Tubulação de Gás" class="mr-2"> Tubulação de Gás</label>
-                                <label class="block"><input type="checkbox" name="projetos[]" value="Projeto de Climatização" class="mr-2"> Projeto de Climatização</label>
-                                <label class="block"><input type="checkbox" name="projetos[]" value="Design de interiores" class="mr-2"> Design de interiores</label>
-                            </div>
-                        </div>
-                        
-                        <div id="construcao-options" class="hidden">
-                            <label for="construcao-tipo" class="block text-gray-700 font-semibold mb-2">Selecione o tipo de construção:</label>
-                            <select id="construcao-tipo" name="construcao-tipo" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
-                                <option value="">Selecione o tipo</option>
-                                <option value="Residencial">Residencial</option>
-                                <option value="Comercial">Comercial</option>
-                                <option value="Industrial">Industrial</option>
-                            </select>
-                        </div>
-                        
-                        <div id="reformas-options" class="hidden space-y-4">
-                            <label class="block text-gray-700 font-semibold mb-2">Selecione o(s) tipo(s) de reforma(s):</label>
-                            <div class="space-y-2">
-                                <label class="block"><input type="checkbox" name="reformas[]" value="Reforma Completa" class="mr-2"> Reforma Completa</label>
-                                <label class="block"><input type="checkbox" name="reformas[]" value="Reforma Parcial" class="mr-2"> Reforma Parcial</label>
-                                <label class="block"><input type="checkbox" name="reformas[]" value="Banheiros E/OU Lavabos" class="mr-2"> Banheiros E/OU Lavabos</label>
-                                <label class="block"><input type="checkbox" name="reformas[]" value="Cozinha E/OU Área Gourmet" class="mr-2"> Cozinha E/OU Área Gourmet</label>
-                                <label class="block"><input type="checkbox" name="reformas[]" value="Pinturas e Acabamentos" class="mr-2"> Pinturas e Acabamentos</label>
-                                <label class="block"><input type="checkbox" name="reformas[]" value="Instalações Elétricas e Hidráulicas" class="mr-2"> Instalações Elétricas e Hidráulicas</label>
-                                <label class="block"><input type="checkbox" name="reformas[]" value="Móveis Planejados e Marcenaria" class="mr-2"> Móveis Planejados e Marcenaria</label>
-                                <label class="block"><input type="checkbox" name="reformas[]" value="Pisos e Revestimentos" class="mr-2"> Pisos e Revestimentos</label>
-                                <label class="block"><input type="checkbox" name="reformas[]" value="Outros" class="mr-2"> Outros</label>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label for="m2" class="block text-gray-700 font-semibold mb-2">Área (m²)</label>
-                            <input type="number" id="m2" name="m2" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
-                        </div>
+        <section class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="p-8 rounded-lg shadow-lg bg-white">
+                    <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Solicite seu Orçamento</h2>
+                    <form id="contact-form" action="https://script.google.com/macros/s/AKfycbxwkhZ-o--JT1c57gwUExJyiJvz4VZLeCURlqHYd1PARvTWYnP37dELXQLaDZgXUjwL9Q/exec" method="POST" class="space-y-6">
+                        <div>
+                            <label for="nome" class="block text-gray-700 font-semibold mb-2">Seu Nome</label>
+                            <input type="text" id="nome" name="nome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-semibold mb-2">Seu E-mail</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                        </div>
+                        <div>
+                            <label for="telefone" class="block text-gray-700 font-semibold mb-2">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        </div>
+                        <div>
+                            <label for="servico" class="block text-gray-700 font-semibold mb-2">Tipo de Serviço</label>
+                            <select id="servico" name="servico" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required onchange="showOptions()">
+                                <option value="">Selecione um serviço</option>
+                                <option value="projetos">Projetos</option>
+                                <option value="gerenciamento">Gerenciamento de Obras</option>
+                                <option value="construcao">Construção</option>
+                                <option value="reformas">Reformas</option>
+                            </select>
+                        </div>
+                        
+                        <div id="projetos-options" class="hidden space-y-4">
+                            <label class="block text-gray-700 font-semibold mb-2">Selecione o(s) tipo(s) de projeto(s):</label>
+                            <div class="space-y-2">
+                                <label class="block"><input type="checkbox" name="projetos[]" value="Projeto Arquitetônico" class="mr-2"> Projeto Arquitetônico</label>
+                                <label class="block"><input type="checkbox" name="projetos[]" value="Projeto Estrutural" class="mr-2"> Projeto Estrutural</label>
+                                <label class="block"><input type="checkbox" name="projetos[]" value="Projeto Elétrico" class="mr-2"> Projeto Elétrico</label>
+                                <label class="block"><input type="checkbox" name="projetos[]" value="Projeto Hidrossanitário" class="mr-2"> Projeto Hidrossanitário</label>
+                                <label class="block"><input type="checkbox" name="projetos[]" value="Tubulação de água quente" class="mr-2"> Tubulação de água quente</label>
+                                <label class="block"><input type="checkbox" name="projetos[]" value="Projeto de Cabeamento de rede" class="mr-2"> Projeto de Cabeamento de rede</label>
+                                <label class="block"><input type="checkbox" name="projetos[]" value="Tubulação de Gás" class="mr-2"> Tubulação de Gás</label>
+                                <label class="block"><input type="checkbox" name="projetos[]" value="Projeto de Climatização" class="mr-2"> Projeto de Climatização</label>
+                                <label class="block"><input type="checkbox" name="projetos[]" value="Design de interiores" class="mr-2"> Design de interiores</label>
+                            </div>
+                        </div>
+                        
+                        <div id="construcao-options" class="hidden">
+                            <label for="construcao-tipo" class="block text-gray-700 font-semibold mb-2">Selecione o tipo de construção:</label>
+                            <select id="construcao-tipo" name="construcao-tipo" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                                <option value="">Selecione o tipo</option>
+                                <option value="Residencial">Residencial</option>
+                                <option value="Comercial">Comercial</option>
+                                <option value="Industrial">Industrial</option>
+                            </select>
+                        </div>
+                        
+                        <div id="reformas-options" class="hidden space-y-4">
+                            <label class="block text-gray-700 font-semibold mb-2">Selecione o(s) tipo(s) de reforma(s):</label>
+                            <div class="space-y-2">
+                                <label class="block"><input type="checkbox" name="reformas[]" value="Reforma Completa" class="mr-2"> Reforma Completa</label>
+                                <label class="block"><input type="checkbox" name="reformas[]" value="Reforma Parcial" class="mr-2"> Reforma Parcial</label>
+                                <label class="block"><input type="checkbox" name="reformas[]" value="Banheiros E/OU Lavabos" class="mr-2"> Banheiros E/OU Lavabos</label>
+                                <label class="block"><input type="checkbox" name="reformas[]" value="Cozinha E/OU Área Gourmet" class="mr-2"> Cozinha E/OU Área Gourmet</label>
+                                <label class="block"><input type="checkbox" name="reformas[]" value="Pinturas e Acabamentos" class="mr-2"> Pinturas e Acabamentos</label>
+                                <label class="block"><input type="checkbox" name="reformas[]" value="Instalações Elétricas e Hidráulicas" class="mr-2"> Instalações Elétricas e Hidráulicas</label>
+                                <label class="block"><input type="checkbox" name="reformas[]" value="Móveis Planejados e Marcenaria" class="mr-2"> Móveis Planejados e Marcenaria</label>
+                                <label class="block"><input type="checkbox" name="reformas[]" value="Pisos e Revestimentos" class="mr-2"> Pisos e Revestimentos</label>
+                                <label class="block"><input type="checkbox" name="reformas[]" value="Outros" class="mr-2"> Outros</label>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="m2" class="block text-gray-700 font-semibold mb-2">Área (m²)</label>
+                            <input type="number" id="m2" name="m2" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                        </div>
 
-                        <div>
-                            <label for="mensagem" class="block text-gray-700 font-semibold mb-2">Conte sobre seu Projeto ou Reforma</label>
-                            <textarea id="mensagem" name="mensagem" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">Enviar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
+                        <div>
+                            <label for="mensagem" class="block text-gray-700 font-semibold mb-2">Conte sobre seu Projeto ou Reforma</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <footer class="bg-blue-900 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-2xl font-bold mb-4">Construens</h3>
-                    <p class="text-gray-300">Sua parceira em construção e reformas. Qualidade, segurança e tranquilidade para sua obra.</p>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Links Rápidos</h4>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="quem-somos.html" class="text-gray-300 hover:text-white transition-colors">Quem Somos</a></li>
-                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Serviços</a></li>
-                        <li><a href="portfolio.html" class="text-gray-300 hover:text-white transition-colors">Portfólio</a></li>
-                        <li><a href="reformas.html" class="text-gray-300 hover:text-white transition-colors">Reformas Seguras</a></li>
-                        <li><a href="contato.html" class="text-gray-300 hover:text-white transition-colors">Contato</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contato</h4>
-                    <div class="space-y-2">
-                        <p class="text-gray-300">
-                            <i class="fas fa-envelope mr-2"></i>
-                            construens.alt@gmail.com
-                        </p>
-                        <p class="text-gray-300">
-                            <i class="fas fa-phone mr-2"></i>
-                            (11) 914-310-221
-                        </p>
-                        <p class="text-gray-300">
-                            <i class="fas fa-map-marker-alt mr-2"></i>
-                            São José dos Campos e Região
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-300">© 2025 Construens. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Construens</h3>
+                    <p class="text-gray-300">Sua parceira em construção e reformas. Qualidade, segurança e tranquilidade para sua obra.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="quem-somos.html" class="text-gray-300 hover:text-white transition-colors">Quem Somos</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Serviços</a></li>
+                        <li><a href="portfolio.html" class="text-gray-300 hover:text-white transition-colors">Portfólio</a></li>
+                        <li><a href="reformas.html" class="text-gray-300 hover:text-white transition-colors">Reformas Seguras</a></li>
+                        <li><a href="contato.html" class="text-gray-300 hover:text-white transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contato</h4>
+                    <div class="space-y-2">
+                        <p class="text-gray-300">
+                            <i class="fas fa-envelope mr-2"></i>
+                            construens.alt@gmail.com
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-phone mr-2"></i>
+                            (11) 914-310-221
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            São José dos Campos e Região
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2025 Construens. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
-    <button id="open-whatsapp-modal" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50">
-        <i class="fab fa-whatsapp text-2xl"></i>
-    </button>
-    
-    <div id="whatsapp-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">×</span>
-            <h3 class="text-2xl font-bold text-gray-800 text-center mb-6">Fale Conosco pelo WhatsApp</h3>
-            <p class="text-gray-600 text-center mb-4">Por favor, preencha seus dados para iniciarmos a conversa.</p>
-            <form id="whatsapp-form" class="space-y-4">
-                <div>
-                    <label for="whatsapp-nome" class="block text-gray-700 font-semibold mb-2">Nome</label>
-                    <input type="text" id="whatsapp-nome" name="Nome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
-                </div>
-                <div>
-                    <label for="whatsapp-email" class="block text-gray-700 font-semibold mb-2">E-mail</label>
-                    <input type="email" id="whatsapp-email" name="Email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
-                </div>
-                <div>
-                    <label for="whatsapp-telefone" class="block text-gray-700 font-semibold mb-2">Telefone</label>
-                    <input type="tel" id="whatsapp-telefone" name="Telefone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="w-full bg-green-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-green-700 transition-colors">
-                        Iniciar Conversa
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-    
-    <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
+    <button id="open-whatsapp-modal" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </button>
+    
+    <div id="whatsapp-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <h3 class="text-2xl font-bold text-gray-800 text-center mb-6">Fale Conosco pelo WhatsApp</h3>
+            <p class="text-gray-600 text-center mb-4">Por favor, preencha seus dados para iniciarmos a conversa.</p>
+            <form id="whatsapp-form" class="space-y-4">
+                <div>
+                    <label for="whatsapp-nome" class="block text-gray-700 font-semibold mb-2">Nome</label>
+                    <input type="text" id="whatsapp-nome" name="Nome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                </div>
+                <div>
+                    <label for="whatsapp-email" class="block text-gray-700 font-semibold mb-2">E-mail</label>
+                    <input type="email" id="whatsapp-email" name="Email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                </div>
+                <div>
+                    <label for="whatsapp-telefone" class="block text-gray-700 font-semibold mb-2">Telefone</label>
+                    <input type="tel" id="whatsapp-telefone" name="Telefone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="w-full bg-green-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-green-700 transition-colors">
+                        Iniciar Conversa
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
 
-        function showOptions() {
-            const serviceSelect = document.getElementById('servico');
-            const projectsOptions = document.getElementById('projetos-options');
-            const constructionOptions = document.getElementById('construcao-options');
-            const reformsOptions = document.getElementById('reformas-options');
-            const allOptions = [projectsOptions, constructionOptions, reformsOptions];
-        
-            allOptions.forEach(el => {
-                el.classList.add('hidden');
-                el.querySelectorAll('input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
-                el.querySelectorAll('select').forEach(select => select.value = '');
-            });
-        
-            if (serviceSelect.value === 'projetos') {
-                projectsOptions.classList.remove('hidden');
-            } else if (serviceSelect.value === 'construcao') {
-                constructionOptions.classList.remove('hidden');
-            } else if (serviceSelect.value === 'reformas') {
-                reformsOptions.classList.remove('hidden');
-            }
-        }
+        function showOptions() {
+            const serviceSelect = document.getElementById('servico');
+            const projectsOptions = document.getElementById('projetos-options');
+            const constructionOptions = document.getElementById('construcao-options');
+            const reformsOptions = document.getElementById('reformas-options');
+            const allOptions = [projectsOptions, constructionOptions, reformsOptions];
+        
+            allOptions.forEach(el => {
+                el.classList.add('hidden');
+                el.querySelectorAll('input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
+                el.querySelectorAll('select').forEach(select => select.value = '');
+            });
+        
+            if (serviceSelect.value === 'projetos') {
+                projectsOptions.classList.remove('hidden');
+            } else if (serviceSelect.value === 'construcao') {
+                constructionOptions.classList.remove('hidden');
+            } else if (serviceSelect.value === 'reformas') {
+                reformsOptions.classList.remove('hidden');
+            }
+        }
 
-        // Script para o Modal e Formulário do WhatsApp
-        const whatsappModal = document.getElementById('whatsapp-modal');
-        const openModalBtn = document.getElementById('open-whatsapp-modal');
-        const closeBtn = document.querySelector('.close-button');
-        const whatsappForm = document.getElementById('whatsapp-form');
+        // Script para o Modal e Formulário do WhatsApp
+        const whatsappModal = document.getElementById('whatsapp-modal');
+        const openModalBtn = document.getElementById('open-whatsapp-modal');
+        const closeBtn = document.querySelector('.close-button');
+        const whatsappForm = document.getElementById('whatsapp-form');
 
-        // URL do seu Google Apps Script (IMPLANTE O SCRIPT E COLOQUE A URL AQUI)
-        const SCRIPT_URL_WHATSAPP = 'https://script.google.com/macros/s/AKfycbx8aXGmvNcYmyeCgZNFJcsYmkz2jlB8gup05xvigr6uirRhaneRVrGL_t0fB_xzqmDIxw/exec';  
+        // URL do seu Google Apps Script (IMPLANTE O SCRIPT E COLOQUE A URL AQUI)
+        const SCRIPT_URL_WHATSAPP = 'https://script.google.com/macros/s/AKfycbx8aXGmvNcYmyeCgZNFJcsYmkz2jlB8gup05xvigr6uirRhaneRVrGL_t0fB_xzqmDIxw/exec'; 
 
-        // Abre o modal ao clicar no botão
-        openModalBtn.addEventListener('click', () => {
-            whatsappModal.style.display = 'flex';
-        });
+        // Abre o modal ao clicar no botão
+        openModalBtn.addEventListener('click', () => {
+            whatsappModal.style.display = 'flex';
+        });
 
-        // Fecha o modal ao clicar no 'x'
-        closeBtn.addEventListener('click', () => {
-            whatsappModal.style.display = 'none';
-        });
+        // Fecha o modal ao clicar no 'x'
+        closeBtn.addEventListener('click', () => {
+            whatsappModal.style.display = 'none';
+        });
 
-        // Fecha o modal ao clicar fora dele
-        window.addEventListener('click', (event) => {
-            if (event.target == whatsappModal) {
-                whatsappModal.style.display = 'none';
-            }
-        });
+        // Fecha o modal ao clicar fora dele
+        window.addEventListener('click', (event) => {
+            if (event.target == whatsappModal) {
+                whatsappModal.style.display = 'none';
+            }
+        });
 
-        // Envia os dados e redireciona para o WhatsApp
-        whatsappForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+        // Envia os dados e redireciona para o WhatsApp
+        whatsappForm.addEventListener('submit', function(e) {
+            e.preventDefault();
 
-            const form = e.target;
-            const data = new FormData(form);
-            
-            fetch(SCRIPT_URL_WHATSAPP, {
-                method: 'POST',
-                body: data,
-                mode: 'no-cors'
-            })
-            .then(() => {
-                const nome = form.querySelector('#whatsapp-nome').value;
-                const mensagem = `Olá, meu nome é ${nome}. Gostaria de entrar em contato após ver a página de Contato do site.`;
-                const whatsappUrl = `https://wa.me/5511914310221?text=${encodeURIComponent(mensagem)}`;
-                window.open(whatsappUrl, '_blank');
-            })
-            .catch(error => {
-                console.error('Erro ao enviar o formulário:', error);
-                // Em caso de erro, ainda redireciona para o WhatsApp
-                const nome = form.querySelector('#whatsapp-nome').value;
-                const mensagem = `Olá, meu nome é ${nome}. Gostaria de entrar em contato após ver a página de Contato do site.`;
-                const whatsappUrl = `https://wa.me/5511914310221?text=${encodeURIComponent(mensagem)}`;
-                window.open(whatsappUrl, '_blank');
-            });
+            const form = e.target;
+            const data = new FormData(form);
+            
+            fetch(SCRIPT_URL_WHATSAPP, {
+                method: 'POST',
+                body: data,
+                mode: 'no-cors'
+            })
+            .then(() => {
+                const nome = form.querySelector('#whatsapp-nome').value;
+                const mensagem = `Olá, meu nome é ${nome}. Gostaria de entrar em contato após ver a página de Contato do site.`;
+                const whatsappUrl = `https://wa.me/5511914310221?text=${encodeURIComponent(mensagem)}`;
+                window.open(whatsappUrl, '_blank');
+            })
+            .catch(error => {
+                console.error('Erro ao enviar o formulário:', error);
+                // Em caso de erro, ainda redireciona para o WhatsApp
+                const nome = form.querySelector('#whatsapp-nome').value;
+                const mensagem = `Olá, meu nome é ${nome}. Gostaria de entrar em contato após ver a página de Contato do site.`;
+                const whatsappUrl = `https://wa.me/5511914310221?text=${encodeURIComponent(mensagem)}`;
+                window.open(whatsappUrl, '_blank');
+            });
 
-            whatsappModal.style.display = 'none';
-        });
-    </script>
+            whatsappModal.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
