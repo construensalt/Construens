@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - Construens</title>
-    <meta name="description" content="Entre em contato com a Construens em São Paulo ou São José dos Campos. Agende uma visita ou solicite seu orçamento.">
+    <meta name="description" content="Entre em contato com a Construens em São José dos Campos. Agende uma visita ou solicite seu orçamento.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -119,19 +119,8 @@
                     </div>
                 </div>
 
-                <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Nossos Endereços</h2>
-                <div class="grid md:grid-cols-2 gap-12 mb-12">
-                    <div class="bg-gray-100 p-8 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4">São Paulo - SP</h3>
-                        <div class="flex items-start">
-                            <i class="fas fa-map-marker-alt text-blue-600 text-2xl mr-4 mt-1"></i>
-                            <p class="text-gray-600 text-lg">
-                                Rua Dario Costa Matos, 148 - Parque Boturussu <br>
-                                São Paulo - S.P - Cep. 03805-090 - Brasil
-                            </p>
-                        </div>
-                    </div>
-                    
+                <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Nosso Endereço</h2>
+                <div class="grid md:grid-cols-1 gap-12 mb-12">
                     <div class="bg-gray-100 p-8 rounded-lg shadow-lg">
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">São José dos Campos - SP</h3>
                         <div class="flex items-start">
@@ -146,7 +135,7 @@
                 
                 <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Onde Estamos</h3>
                 <div class="aspect-w-16 aspect-h-9 w-full rounded-lg overflow-hidden shadow-lg">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.66854181817!2d-45.8943714849688!3d-23.219503384877798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4ba40e0b9691%3A0x6a05370d91244e31!2sR.%20Dr.%20Orlando%20Feirabend%20Filho%2C%20230%20-%20Parque%20Res.%20Aquarius%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP%2C%2012246-190!5e0!3m2!1spt-BR!2sbr!4v1629854728954!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.391297597507!2d-45.90805122495393!3d-22.935104882741136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4b9f33b1e843%3A0xb30e8c89c79f3237!2sAv.%20Vicente%20Carlos%20Corra%2C%2094%20-%20Vila%20Industrial%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP%2C%2012220-410!5e0!3m2!1spt-BR!2sbr!4v1718017361719!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </section>
@@ -262,4 +251,140 @@
                     <div class="space-y-2">
                         <p class="text-gray-300">
                             <i class="fas fa-envelope mr-2"></i>
-                            construens
+                            construens.alt@gmail.com
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-phone mr-2"></i>
+                            (11) 914-310-221
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            São José dos Campos e Região
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2025 Construens. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="open-whatsapp-modal" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </button>
+    
+    <div id="whatsapp-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <h3 class="text-2xl font-bold text-gray-800 text-center mb-6">Fale Conosco pelo WhatsApp</h3>
+            <p class="text-gray-600 text-center mb-4">Por favor, preencha seus dados para iniciarmos a conversa.</p>
+            <form id="whatsapp-form" class="space-y-4">
+                <div>
+                    <label for="whatsapp-nome" class="block text-gray-700 font-semibold mb-2">Nome</label>
+                    <input type="text" id="whatsapp-nome" name="Nome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                </div>
+                <div>
+                    <label for="whatsapp-email" class="block text-gray-700 font-semibold mb-2">E-mail</label>
+                    <input type="email" id="whatsapp-email" name="Email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                </div>
+                <div>
+                    <label for="whatsapp-telefone" class="block text-gray-700 font-semibold mb-2">Telefone</label>
+                    <input type="tel" id="whatsapp-telefone" name="Telefone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="w-full bg-green-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-green-700 transition-colors">
+                        Iniciar Conversa
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function showOptions() {
+            const serviceSelect = document.getElementById('servico');
+            const projectsOptions = document.getElementById('projetos-options');
+            const constructionOptions = document.getElementById('construcao-options');
+            const reformsOptions = document.getElementById('reformas-options');
+            const allOptions = [projectsOptions, constructionOptions, reformsOptions];
+        
+            allOptions.forEach(el => {
+                el.classList.add('hidden');
+                el.querySelectorAll('input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
+                el.querySelectorAll('select').forEach(select => select.value = '');
+            });
+        
+            if (serviceSelect.value === 'projetos') {
+                projectsOptions.classList.remove('hidden');
+            } else if (serviceSelect.value === 'construcao') {
+                constructionOptions.classList.remove('hidden');
+            } else if (serviceSelect.value === 'reformas') {
+                reformsOptions.classList.remove('hidden');
+            }
+        }
+
+        // Script para o Modal e Formulário do WhatsApp
+        const whatsappModal = document.getElementById('whatsapp-modal');
+        const openModalBtn = document.getElementById('open-whatsapp-modal');
+        const closeBtn = document.querySelector('.close-button');
+        const whatsappForm = document.getElementById('whatsapp-form');
+
+        // URL do seu Google Apps Script (IMPLANTE O SCRIPT E COLOQUE A URL AQUI)
+        const SCRIPT_URL_WHATSAPP = 'https://script.google.com/macros/s/AKfycbx8aXGmvNcYmyeCgZNFJcsYmkz2jlB8gup05xvigr6uirRhaneRVrGL_t0fB_xzqmDIxw/exec';  
+
+        // Abre o modal ao clicar no botão
+        openModalBtn.addEventListener('click', () => {
+            whatsappModal.style.display = 'flex';
+        });
+
+        // Fecha o modal ao clicar no 'x'
+        closeBtn.addEventListener('click', () => {
+            whatsappModal.style.display = 'none';
+        });
+
+        // Fecha o modal ao clicar fora dele
+        window.addEventListener('click', (event) => {
+            if (event.target == whatsappModal) {
+                whatsappModal.style.display = 'none';
+            }
+        });
+
+        // Envia os dados e redireciona para o WhatsApp
+        whatsappForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const data = new FormData(form);
+            
+            fetch(SCRIPT_URL_WHATSAPP, {
+                method: 'POST',
+                body: data,
+                mode: 'no-cors'
+            })
+            .then(() => {
+                const nome = form.querySelector('#whatsapp-nome').value;
+                const mensagem = `Olá, meu nome é ${nome}. Gostaria de entrar em contato após ver a página de Contato do site.`;
+                const whatsappUrl = `https://wa.me/5511914310221?text=${encodeURIComponent(mensagem)}`;
+                window.open(whatsappUrl, '_blank');
+            })
+            .catch(error => {
+                console.error('Erro ao enviar o formulário:', error);
+                // Em caso de erro, ainda redireciona para o WhatsApp
+                const nome = form.querySelector('#whatsapp-nome').value;
+                const mensagem = `Olá, meu nome é ${nome}. Gostaria de entrar em contato após ver a página de Contato do site.`;
+                const whatsappUrl = `https://wa.me/5511914310221?text=${encodeURIComponent(mensagem)}`;
+                window.open(whatsappUrl, '_blank');
+            });
+
+            whatsappModal.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
