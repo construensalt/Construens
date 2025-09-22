@@ -3,75 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Construens</title>
-    <meta name="description" content="Veja nossos projetos realizados em São José dos Campos. Reformas completas, cozinhas, banheiros e muito mais.">
+    <title>Blog - Construens</title>
+    <meta name="description" content="Leia nossos artigos sobre reformas, construção e design de interiores. Dicas e tendências para sua obra.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* INÍCIO DA ALTERAÇÃO - ESTILOS PARA O FUNDO COM IMAGEM E SOBREPOSIÇÃO */
-        .hero-portfolio::after {
+        /* Estilos do Blog */
+        .hero-blog::after {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.4); /* Preto com 40% de transparência */
+            background-color: rgba(0, 0, 0, 0.4);
             z-index: 1;
         }
         .hero-content {
             position: relative;
             z-index: 2;
         }
-        /* FIM DA ALTERAÇÃO */
-
-        /* Estilos do carrossel */
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            height: 250px; /* Define uma altura fixa para o carrossel, ajuste se necessário */
-        }
-        .carousel-inner {
-            display: flex;
-            height: 100%;
-            transition: transform 0.5s ease-in-out;
-        }
-        .carousel-item {
-            flex-shrink: 0; /* Impede que os itens encolham */
-            width: 100%;
-            height: 100%; /* Garante que o item ocupe a altura do container */
-        }
-        .carousel-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Garante que a imagem cubra o container sem distorcer */
-            display: block; /* Remove o espaço extra abaixo da imagem */
-        }
-        .carousel-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 8px 12px;
-            border-radius: 9999px;
-            z-index: 10;
-            opacity: 0.8;
-            transition: opacity 0.2s;
-            cursor: pointer;
-            border: none;
-        }
-        .carousel-button:hover {
-            opacity: 1;
-        }
-        .carousel-prev {
-            left: 10px;
-        }
-        .carousel-next {
-            right: 10px;
-        }
-
         /* Estilos do Modal */
         .modal {
             display: none;
@@ -115,9 +66,9 @@
                     <li><a href="index.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a></li>
                     <li><a href="quem-somos.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Quem Somos</a></li>
                     <li><a href="services.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Serviços</a></li>
-                    <li><a href="portfolio.html" class="text-blue-600 font-bold">Portfólio</a></li>
+                    <li><a href="portfolio.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Portfólio</a></li>
                     <li><a href="reformas.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Reformas Seguras</a></li>
-                    <li><a href="blog.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Blog</a></li>
+                    <li><a href="blog.html" class="text-blue-600 font-bold">Blog</a></li>
                     <li><a href="contato.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Contato</a></li>
                 </ul>
 
@@ -131,9 +82,9 @@
                     <li><a href="index.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a></li>
                     <li><a href="quem-somos.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium">Quem Somos</a></li>
                     <li><a href="services.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium">Serviços</a></li>
-                    <li><a href="portfolio.html" class="block text-blue-600 font-bold">Portfólio</a></li>
+                    <li><a href="portfolio.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium">Portfólio</a></li>
                     <li><a href="reformas.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium">Reformas Seguras</a></li>
-                    <li><a href="blog.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium">Blog</a></li>
+                    <li><a href="blog.html" class="block text-blue-600 font-bold">Blog</a></li>
                     <li><a href="contato.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium">Contato</a></li>
                 </ul>
             </div>
@@ -141,154 +92,48 @@
     </header>
 
     <main class="pt-20">
-        <section class="hero-portfolio text-white py-16 md:py-24" style="background-image: url('URL_DA_SUA_IMAGEM'); background-size: cover; background-position: center; position: relative;">
+        <section class="hero-blog text-white py-16 md:py-24" style="background-image: url('URL_DA_SUA_IMAGEM_DE_BLOG'); background-size: cover; background-position: center; position: relative;">
             <div class="hero-content container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-5xl font-bold mb-4">Projetos realizados com excelência.</h2>
-                <p class="text-xl mb-8">Nosso compromisso com a qualidade e a satisfação do cliente em cada detalhe.</p>
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Artigos e Dicas do Nosso Blog.</h2>
+                <p class="text-xl mb-8">Conteúdo exclusivo sobre construção, reformas, design e muito mais.</p>
             </div>
         </section>
         <section class="py-16">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
-                    <h3 class="text-3xl font-bold text-gray-800">Nosso Portfólio</h3>
-                    <p class="text-lg text-gray-600 mt-2">Uma amostra dos nossos trabalhos em construção, reformas e projetos de interiores.</p>
+                    <h3 class="text-3xl font-bold text-gray-800">Últimos Artigos</h3>
+                    <p class="text-lg text-gray-600 mt-2">Fique por dentro das últimas tendências e novidades.</p>
                 </div>
                 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <div class="carousel-container">
-                            <div class="carousel-inner">
-                                <img src="imagens/1.png" alt="Construção de casa residencial - Foto 1" class="carousel-item">
-                                <img src="imagens/2.png" alt="Construção de casa residencial - Foto 2" class="carousel-item">
-                                <img src="imagens/3.png" alt="Construção de casa residencial - Foto 3" class="carousel-item">
-                            </div>
-                            <button class="carousel-button carousel-prev">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="carousel-button carousel-next">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                        </div>
+                        <img src="imagens/blog_1.jpg" alt="Título do Artigo 1" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Construção Residencial</h4>
-                            <p class="text-gray-600">Retrofit Residencial Altos da Serra I - Urbanova, São José dos Campos/SP</p>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">5 Dicas Essenciais para sua Reforma de Banheiro</h4>
+                            <p class="text-gray-600 text-sm mb-4">22 de setembro de 2025</p>
+                            <p class="text-gray-600 mb-4">Saiba como planejar e executar a reforma do seu banheiro de forma eficiente, evitando dores de cabeça e garantindo um resultado incrível.</p>
+                            <a href="#" class="text-blue-600 font-semibold hover:underline">Leia Mais &rarr;</a>
                         </div>
                     </div>
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <div class="carousel-container">
-                            <div class="carousel-inner">
-                                <img src="imagens/4.png" alt="Reforma de apartamento moderno - Foto 1" class="carousel-item">
-                                <img src="imagens/5.png" alt="Reforma de apartamento moderno - Foto 2" class="carousel-item">
-                                <img src="imagens/6.png" alt="Reforma de apartamento moderno - Foto 3" class="carousel-item">
-                            </div>
-                            <button class="carousel-button carousel-prev">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="carousel-button carousel-next">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Reforma Residencial
-</h4>
-                            <p class="text-gray-600">Revitalização Residencial Aquarius I - São José dos Campos/SP</p>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <div class="carousel-container">
-                            <div class="carousel-inner">
-                                <img src="imagens/7.png" alt="Reforma de cozinha com armários novos - Foto 1" class="carousel-item">
-                                <img src="imagens/8.png" alt="Reforma de cozinha com armários novos - Foto 2" class="carousel-item">
-                                <img src="imagens/9.png" alt="Reforma de cozinha com armários novos - Foto 3" class="carousel-item">
-                            </div>
-                            <button class="carousel-button carousel-prev">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="carousel-button carousel-next">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Construção Residencial
-</h4>
-                            <p class="text-gray-600">Condomínio Terras do Vale - Caçapava/SP</p>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <div class="carousel-container">
-                            <div class="carousel-inner">
-                                <img src="imagens/10.png" alt="Reforma de banheiro moderno - Foto 1" class="carousel-item">
-                                <img src="imagens/11.png" alt="Reforma de banheiro moderno - Foto 2" class="carousel-item">
-                                <img src="imagens/12.png" alt="Reforma de banheiro moderno - Foto 3" class="carousel-item">
-                            </div>
-                            <button class="carousel-button carousel-prev">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="carousel-button carousel-next">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Reforma Comercial</h4>
-                            <p class="text-gray-600">Implantação de Layout Comercial - Centro Empresarial Aquarius BY Helbor - São José dos Campos/SP</p>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <div class="carousel-container">
-                            <div class="carousel-inner">
-                                <img src="imagens/13.png" alt="Projeto de interiores de escritório - Foto 1" class="carousel-item">
-                                <img src="imagens/14.png" alt="Projeto de interiores de escritório - Foto 2" class="carousel-item">
-                                <img src="imagens/15.png" alt="Projeto de interiores de escritório - Foto 3" class="carousel-item">
-                            </div>
-                            <button class="carousel-button carousel-prev">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="carousel-button carousel-next">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Design de Interiores Comercial</h4>
-                            <p class="text-gray-600">Implantação de Layout Comercial - Edifício Helbor Downtown Offices & Mall - São José dos Campos/SP</p>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <div class="carousel-container">
-                            <div class="carousel-inner">
-                                <img src="imagens/16.png" alt="Construção de deck de madeira - Foto 1" class="carousel-item">
-                                <img src="imagens/17.png" alt="Construção de deck de madeira - Foto 2" class="carousel-item">
-                                <img src="imagens/18.png" alt="Construção de deck de madeira - Foto 3" class="carousel-item">
-                            </div>
-                            <button class="carousel-button carousel-prev">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="carousel-button carousel-next">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Construção Comercial</h4>
-                            <p class="text-gray-600">Edifício Isis - Bairro Floresta - São José dos Campos -  Construção de um edifício comercial com 4 salões e 5 salas comerciais.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="bg-gray-200 py-16">
-            <div class="container mx-auto px-4">
-                <div class="grid md:grid-cols-3 gap-8 text-center">
-                    <div>
-                        <p class="text-5xl font-bold text-blue-600">15+</p>
-                        <p class="text-gray-600 mt-2">Projetos Concluídos</p>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="imagens/blog_2.jpg" alt="Título do Artigo 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Como Escolher o Piso Ideal para cada Ambiente</h4>
+                            <p class="text-gray-600 text-sm mb-4">15 de setembro de 2025</p>
+                            <p class="text-gray-600 mb-4">Conheça os diferentes tipos de piso e as melhores opções para cada cômodo da sua casa, combinando estética e funcionalidade.</p>
+                            <a href="#" class="text-blue-600 font-semibold hover:underline">Leia Mais &rarr;</a>
+                        </div>
                     </div>
-                    <div>
-                        <p class="text-5xl font-bold text-blue-600">4+</p>
-                        <p class="text-gray-600 mt-2">Anos de Experiência</p>
-                    </div>
-                    <div>
-                        <p class="text-5xl font-bold text-blue-600">100%</p>
-                        <p class="text-gray-600 mt-2">Satisfação do Cliente</p>
+
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="imagens/blog_3.jpg" alt="Título do Artigo 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Tendências de Design de Cozinha para 2025</h4>
+                            <p class="text-gray-600 text-sm mb-4">08 de setembro de 2025</p>
+                            <p class="text-gray-600 mb-4">Descubra as cores, materiais e layouts que estarão em alta no próximo ano para renovar a cozinha dos seus sonhos.</p>
+                            <a href="#" class="text-blue-600 font-semibold hover:underline">Leia Mais &rarr;</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -388,40 +233,6 @@
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('hidden');
         }
-
-        // CÓDIGO JAVASCRIPT DO CARROSSEL
-        document.addEventListener('DOMContentLoaded', () => {
-            const carousels = document.querySelectorAll('.carousel-container');
-
-            carousels.forEach(carousel => {
-                const inner = carousel.querySelector('.carousel-inner');
-                const prevBtn = carousel.querySelector('.carousel-prev');
-                const nextBtn = carousel.querySelector('.carousel-next');
-                const items = carousel.querySelectorAll('.carousel-item');
-                let currentIndex = 0;
-
-                function updateCarousel() {
-                    if (inner) {
-                        const offset = -currentIndex * 100;
-                        inner.style.transform = `translateX(${offset}%)`;
-                    }
-                }
-
-                if (prevBtn && nextBtn) {
-                    prevBtn.addEventListener('click', () => {
-                        currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
-                        updateCarousel();
-                    });
-
-                    nextBtn.addEventListener('click', () => {
-                        currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
-                        updateCarousel();
-                    });
-                }
-                
-                updateCarousel(); // Initialize position
-            });
-        });
 
         // CÓDIGO JAVASCRIPT DO MODAL E FORMULÁRIO DO WHATSAPP
         const whatsappModal = document.getElementById('whatsapp-modal');
